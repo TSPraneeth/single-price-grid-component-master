@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root
+{ 
+--Cyan: hsl(179, 62%, 43%);
+--BrightYellow: hsl(71, 73%, 54%);
+--LightGray: hsl(204, 43%, 93%);
+--GrayishBlue: hsl(218, 22%, 67%);
+}
+
+*
+{
+    margin: 0;
+}
+
+body
+{
+    font-family: 'Karla', sans-serif;
+    min-height: 100vh;
+    font-size: 1rem;
+    color: var(--LightGray);
+    font-weight: 400;
+    background-color: var(--LightGray);
+    display: flex;
+}
+
+.grid_container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.8fr 0.8fr;
+    grid-template-areas: 
+        "join"
+        "signup"
+        "why";
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 550px;
+    margin:auto;
+}
+
+.for_padding
+{
+    padding: 20px;
+}
+
+.join
+{
+    grid-area: join;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.signup
+{
+    grid-area: signup;
+    background-color: var(--Cyan);
+}
+
+.why
+{
+    grid-area: why;
+    background-color: hsla(179, 62%, 43%,0.8);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.join_heading
+{
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+.join_heading2
+{
+    color: var(--BrightYellow);
+    margin-bottom: 0.7rem;
+}
+
+.desc
+{
+    color: var(--GrayishBlue);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.desc2
+{
+    color: var(--LightGray);
+    margin-bottom: 1rem;
+}
+
+.second_heading
+{
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.rate
+{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.perm
+{
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: hsla(204, 43%, 93%,0.7);
+    vertical-align: super;
+    margin-left: 0.3rem;
+}
+
+.sign
+{
+    width: 100%;
+    background-color: var(--BrightYellow);
+    text-align: center;
+    cursor: pointer;
+    border:0;
+    padding: 10px 20px;
+    color: var(--LightGray);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.whyus
+{
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width:600px) {
+    .grid_container
+    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "join join"
+            "signup why";
+    }
+
+    .why
+    {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        padding: 20px 35px 40px 35px;
+    }
+
+    .signup
+    {
+        border-bottom-left-radius: 10px;
+        padding: 20px 30px 40px 50px;
+    }
+
+    .join
+    {
+        padding:20px 50px;
+    }
+
+    .join_heading
+    {
+        font-size: 1.5rem;
+    }
+
+    .join_heading2
+    {
+        font-size: 1.2rem;
+    }
+}
